@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script th:src="@{/js/tailwind.config.js}"></script>
+</head>
+<body>
+<section class="w-full h-[100vh] flex flex-col justify-between">
+    <header th:insert="./fragments/header.html :: header" class="w-full h-20"></header>
+    <section th:insert="./fragments/update :: update" class="flex flex-col justify-center items-center"></section>
+    <footer th:insert="./fragments/footer :: footer" class="w-full h-20 flex"></footer>
+</section>
+</body>
+</html>

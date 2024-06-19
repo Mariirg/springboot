@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+    <section th:fragment="register" class="w-full max-w-md p-8 bg-white rounded-xl shadow-lg">
+        <h1 class="text-3xl font-serif text-center text-pink-500 mb-4">Inicio de Sesión</h1>
+        <form action="#" method="post" class="flex flex-col space-y-4">
+            <input type="email" placeholder="Ingresa tu correo"
+                   class="border-2 border-pink-300 rounded-md px-3 py-2 focus:outline-none focus:border-purple-300">
+            <input type="password" placeholder="Ingresa tu contraseña"
+                   class="border-2 border-pink-300 rounded-md px-3 py-2 focus:outline-none focus:border-purple-300">
+            <button type="submit" class="bg-pink-300 text-white rounded-xl px-4 py-2 hover:bg-pink-400 transition duration-300">
+                Ingresar
+            </button>
+        </form>
+        <div class="mt-4 flex items-center">
+            <input type="checkbox" class="h-4 w-4 text-pink-500 border-gray-300 rounded">
+            <label for="terms" class="ml-2 text-gray-600">Acepto los términos y condiciones</label>
+        </div>
+    </section>
+</body>
+</html>

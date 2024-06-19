@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script th:src="@{/js/tailwind.config.js}"></script>
+</head>
+
+<body class="w-full h-auto flex flex-col">
+    <section class="w-full h-[100vh] flex flex-col justify-between">
+        <header th:insert="./fragments/header.html :: header" class="w-full h-20"></header>
+        <article th:insert="./fragments/table.html :: table"></article>
+        <footer th:insert="./fragments/footer :: footer" class="w-full h-20 flex"></footer>
+    </section>
+</body>
+
+</html>

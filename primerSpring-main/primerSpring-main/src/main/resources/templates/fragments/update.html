@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-lightgray flex justify-center items-center min-h-screen">
+    <div class="w-80 bg-pink-100 rounded-xl shadow-lg p-6">
+        <div th:fragment="login" class="w-full h-full flex flex-col justify-center items-center">
+            <div class="w-24 h-24 flex justify-center items-center mb-4">
+                <img src="https://res.cloudinary.com/dcusfx4cc/image/upload/v1718730021/Imagenes/ym0dmnyexhkva7ddffmm.png"
+                     alt="Logo">
+            </div>
+            <form th:action="@{/actualizar}" th:object="${Users}" method="post" class="w-full flex flex-col space-y-4">
+                <input type="hidden" th:field="*{id}">
+                <input th:field="*{name}" type="text" placeholder="Name"
+                       class="rounded-md border-2 border-pink-300 px-3 py-2 focus:border-yellow-900 outline-none">
+                <input th:field="*{lastName}" type="text" placeholder="LastName"
+                       class="rounded-md border-2 border-pink-300 px-3 py-2 focus:border-yellow-900 outline-none">
+                <input th:field="*{email}" type="email" placeholder="Email"
+                       class="rounded-md border-2 border-pink-300 px-3 py-2 focus:border-yellow-900 outline-none">
+                <input th:field="*{password}" type="password" placeholder="Password"
+                       class="rounded-md border-2 border-pink-300 px-3 py-2 focus:border-yellow-900 outline-none">
+                <label for="description" class="text-pink-500 mb-1">Description</label>
+                <textarea th:field="*{description}" id="description" cols="30" rows="5"
+                          class="rounded-md border-2 border-pink-300 px-3 py-2 focus:border-yellow-900 outline-none resize-none"></textarea>
+                <input type="submit" value="Actualizar"
+                       class="bg-pink-300 text-white rounded-md border-2 border-pink-300 px-4 py-2 hover:bg-pink-400 transition duration-300">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
